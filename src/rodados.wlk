@@ -26,32 +26,39 @@ class Renault {
 	}
 }
 
-object interiorComodo{
-	method capacidad() {return 5}
-	method peso() {return 700}
-}
-
-object interiorPopular{
-	method capacidad(){return 12}
-	method peso() {return 1000}
-}
-
-object motorPulenta{
-	method peso() {return 800}
-	method velocidad() {return 130}
-	}
-
-object motorBataton{
-	method peso() {return 500}
-	method velocidad() {return 80}
+class Autoespecial {
+	var property color 
+	var property capacidad
+	var property velocidad
+	var property peso
 }
 
 object trafic{
 	var property color = "blanco"
-	var property interior
-	var property motor
+	var property interior = comodo
+	var property motor = bataton
 	method capacidad(){return interior.capacidad()}
 	method velocidad(){return motor.velocidad()}
 	method peso() {return interior.peso() + motor.peso() + 4000}
 }
 
+
+object comodo{
+	method capacidad() {return 5}
+	method peso() {return 700}
+}
+
+object popular{
+	method capacidad(){return 12}
+	method peso() {return 1000}
+}
+
+object pulenta{
+	method peso() {return 800}
+	method velocidad() {return 130}
+	}
+
+object bataton{
+	method peso() {return 500}
+	method velocidad() {return 80}
+}
