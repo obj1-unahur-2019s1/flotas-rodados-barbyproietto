@@ -7,7 +7,7 @@ class Corsa {
 }
 
 class Renault {
-	var property tieneTanque = true
+	var property tieneTanque = false
 	var property color = "azul"
 	method capacidad() {
 		if(tieneTanque)

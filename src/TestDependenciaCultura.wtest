@@ -1,0 +1,43 @@
+import rodados.*
+import dependencia.*
+
+
+test "test cultura" {
+	var cultura = new Dependencias()
+	
+	cultura.empleados(31)
+	var cachito = new Corsa()
+	cachito.color("Rojo")
+	var kwid1 = new Renault()
+	kwid1.tieneTanque(true)
+	var kwid2 = new Renault()
+	kwid2.tieneTanque(true)
+	var kwid3 = new Renault()
+	kwid3.tieneTanque(false)
+	
+	
+	cultura.agregarAFlota(cachito)
+	cultura.agregarAFlota(kwid1)	
+	cultura.agregarAFlota(kwid2)
+	cultura.agregarAFlota(kwid3)
+	cultura.agregarAFlota(trafic)
+	trafic.interior(popular)
+	trafic.motor(bataton)
+	
+	
+	
+	assert.equals(10700, cultura.pesoTotalFlota())
+	
+	assert.equals(false, cultura.estaBienEquipada())
+	
+	assert.equals(10,cultura.capacidadTotalEnColor("azul"))
+	
+	assert.equals("Rojo", cultura.colorDelRodadoMasRapido())
+	
+	assert.equals(false, cultura.esGrande())
+	
+	assert.equals(5 , cultura.capacidadFaltante())
+	
+	}
+
+
