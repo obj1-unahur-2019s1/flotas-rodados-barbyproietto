@@ -4,8 +4,8 @@ import dependencia.*
 
 test "test cultura" {
 	var cultura = new Dependencias()
-	
 	cultura.empleados(31)
+	
 	var cachito = new Corsa()
 	cachito.color("Rojo")
 	var kwid1 = new Renault()
@@ -25,17 +25,11 @@ test "test cultura" {
 	trafic.motor(bataton)
 	
 	
-	
 	assert.equals(10700, cultura.pesoTotalFlota())
-	
 	assert.equals(false, cultura.estaBienEquipada())
-	
 	assert.equals(10,cultura.capacidadTotalEnColor("azul"))
-	
 	assert.equals("Rojo", cultura.colorDelRodadoMasRapido())
-	
 	assert.equals(false, cultura.esGrande())
-	
 	assert.equals(5 , cultura.capacidadFaltante())
 	
 	}

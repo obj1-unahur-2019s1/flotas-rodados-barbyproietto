@@ -5,9 +5,8 @@ import dependencia.*
 
 test "test dependencia" {
 	var deporte = new Dependencias()
-	
-	
 	deporte.empleados(45)
+	
 	var cachito = new Corsa()
 	cachito.color("Rojo")
 	var corsaAzul = new Corsa()
@@ -22,28 +21,21 @@ test "test dependencia" {
 	autoEspecial.peso(1200)
 	autoEspecial.color("Beige")
 	
-	
-
 
 	deporte.agregarAFlota(cachito)
+	//deporte.agregarAFlota(new Corsa(color = "azul"))
 	deporte.agregarAFlota(corsaAzul)
 	deporte.agregarAFlota(corsaVerde)
 	deporte.agregarAFlota(kwid)
 	deporte.agregarAFlota(autoEspecial)
-	
-
+	//deporte.agregarAFlota(new AutoEspecial(capacidad =5, velocidad = 160, peso = 1200, color = "beige"))
 	
 	assert.equals(6450, deporte.pesoTotalFlota())
-	
 	assert.equals(true, deporte.estaBienEquipada())
-	
 	assert.equals(4, deporte.capacidadTotalEnColor("Azul"))
-	
 	assert.equals("Beige", deporte.colorDelRodadoMasRapido())
-	
 	assert.equals(true, deporte.esGrande())
-	
-	assert.equals(25 , deporte.capacidadFaltante())
+	assert.equals(25, deporte.capacidadFaltante())
 	
 }
 
