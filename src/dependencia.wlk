@@ -1,5 +1,6 @@
 class Dependencias{
 	var flota = []
+	var pedidos = []
 	var property empleados = 15
 
 method agregarAFlota(rodado){flota.add(rodado)}
@@ -10,4 +11,14 @@ method capacidadTotalEnColor(color) {return flota.filter{rodado=>rodado.color()=
 method colorDelRodadoMasRapido() {return flota.max{rodado => rodado.velocidad()}.color()}
 method capacidadFaltante() { return empleados - flota.sum({rodado => rodado.capacidad()})}
 method esGrande() {return empleados >= 40 && flota.size() == 5}
+
+method agregarPedidos(pedido) {pedidos.add(pedido)}
+method quitarPedidos(pedido) {pedidos.remove(pedido)}
+method totalDePasajeros(){return pedidos.sum({pedido => pedido.pasajeros()})}
+
+//cuáles de los pedidos que tiene registrados no puede ser satisfecho por ninguno de los autos afectados a la dependencia.
+
+method satisfecho() {return pedidos.filter()}
+
+method autosAfectados(){}
 }
